@@ -6,8 +6,11 @@ import styles from './global.css';
 function App() {
 
   return (
-    <div></div>
+    <div>
+      <Header />
+      <Dashboard />
+    </div>
   );
 }
 
-export default App
+export default App;

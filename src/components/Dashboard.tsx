@@ -6,8 +6,11 @@ import styles from './Dashboard.module.css';
 const Dashboard = () => {
   return (
     <div className={styles.main}>
-      <header>
-        <input></input> {/* Receberá um lista de meses a ser escolhido. Ver qual tag melhor se encaixa*/} 
+      <header className={styles.month}>
+        <form>
+          <label>Selecione o mês: </label>
+          <input/> {/* Receberá um lista de meses a ser escolhido. Ver qual tag melhor se encaixa*/} 
+        </form>
       </header>
 
       <div className={styles.container}>
@@ -18,7 +21,6 @@ const Dashboard = () => {
         <article>
           <MonthView />
         </article>
-
       </div>
 
 

@@ -5,9 +5,12 @@ import styles from './MonthView.module.css';
 
 const MonthView = () =>{
   return(
-    <div>
+    <div className={styles.monthView}>
+      <h2>MÊS</h2> {/* Mês será dinâmico futuramente*/}
       <div>
         <Transaction />
+        <Transaction />
+       
       </div>
 
       <div>
