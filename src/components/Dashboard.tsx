@@ -7,19 +7,19 @@ import styles from './Dashboard.module.css';
 export interface ITransaction{
   id: string;
   type: string;
-  value: number;
+  amount: number;
 }
 
 const Dashboard = () => {
   const [transactions, setTransactions] = useState<ITransaction[]>([])
 
-  function addTransaction(value: number, type: string){
+  function addTransaction(amount: number, type: string){
     setTransactions([
       ...transactions,
       {
         id: crypto.randomUUID(),
         type: type,
-        value: value
+        amount: amount
       }
     ])
   }

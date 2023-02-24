@@ -9,8 +9,9 @@ interface Props{
 }
 
 const MonthView = ({transactions}: Props) =>{
-  const received = transactions.filter(transaction => transaction.type === 'Entrada').length;
-  const spent = transactions.filter(transaction => transaction.type === 'Saída').length;
+  const received = transactions.filter(transaction => transaction.type === 'received').length;
+  const spent = transactions.filter(transaction => transaction.type === 'spent').length;
+  console.log(transactions)
 
   return(
     <div className={styles.monthView}>
