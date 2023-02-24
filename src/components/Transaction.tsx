@@ -1,10 +1,15 @@
+import { ITransaction } from './Dashboard';
 import styles from './Transaction.module.css';
 
-const Transaction = () =>{
+interface Props{
+  transaction: ITransaction;
+}
+
+const Transaction = ({transaction}: Props) =>{
   return(
     <div className={styles.transaction}>
-      <p>entrada</p>
-      <p>valor</p>
+      <p>{transaction.type}</p>
+      <p>{transaction.value}</p>
       <p>lixeira</p>
     </div>
   );

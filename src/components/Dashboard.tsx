@@ -1,9 +1,29 @@
 import InputData from "./InputData";
 import MonthView from "./MonthView";
+import { useState } from "react";
 
 import styles from './Dashboard.module.css';
 
+export interface ITransaction{
+  id: string;
+  type: string;
+  value: number;
+}
+
 const Dashboard = () => {
+  const [transactions, setTransactions] = useState<ITransaction[]>([])
+
+  function addTransaction(value: number, type: string){
+    setTransactions([
+      ...transactions,
+      {
+        id: crypto.randomUUID(),
+        type: type,
+        value: value
+      }
+    ])
+  }
+
   return (
     <div className={styles.main}>
       <header className={styles.month}>
@@ -15,11 +35,11 @@ const Dashboard = () => {
 
       <div className={styles.container}>
         <aside>
-          <InputData />
+          <InputData onSetTransactions={addTransaction}/>
         </aside>
 
         <article>
-          <MonthView />
+          <MonthView transactions={transactions}/>
         </article>
       </div>
 
