@@ -8,8 +8,8 @@ interface Props{
 const Transaction = ({transaction}: Props) =>{
   return(
     <div className={styles.transaction}>
-      <p>{transaction.type}</p>
-      <p>{transaction.value}</p>
+      <p>{transaction.type === 'received' ? 'Entrada' : 'Saída'}</p>
+      <p>{transaction.amount}</p>
       <p>lixeira</p>
     </div>
   );
