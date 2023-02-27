@@ -24,6 +24,14 @@ const Dashboard = () => {
     ])
   }
 
+  function deleteTransactionByID(transactionID: string){
+    const remainingTransactions = transactions.filter(transaction => transaction.id !== transactionID);
+
+    console.log(remainingTransactions);
+
+    setTransactions(remainingTransactions);
+  }
+
   return (
     <div className={styles.main}>
       <header className={styles.month}>
@@ -39,11 +47,9 @@ const Dashboard = () => {
         </aside>
 
         <article>
-          <MonthView transactions={transactions}/>
+          <MonthView transactions={transactions} onRemove={deleteTransactionByID}/>
         </article>
       </div>
-
-
     </div>
   );
 }

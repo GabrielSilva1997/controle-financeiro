@@ -6,12 +6,12 @@ import { ITransaction } from "./Dashboard";
 
 interface Props{
   transactions: ITransaction[];
+  onRemove: (transactionID: string) => void;
 }
 
-const MonthView = ({transactions}: Props) =>{
+const MonthView = ({transactions, onRemove}: Props) =>{
   const received = transactions.filter(transaction => transaction.type === 'received').length;
   const spent = transactions.filter(transaction => transaction.type === 'spent').length;
-  console.log(transactions)
 
   return(
     <div className={styles.monthView}>
@@ -32,7 +32,13 @@ const MonthView = ({transactions}: Props) =>{
       </div>
       
       <div>
-        {transactions.map( transaction => <Transaction transaction={transaction}/>)}
+        {transactions.map( transaction => 
+          <Transaction 
+            key={transaction.id}
+            transaction={transaction} 
+            onRemove={onRemove}
+          />
+        )}
       </div>
 
       <div>
