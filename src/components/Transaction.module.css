@@ -9,9 +9,20 @@
   padding: 1rem;
   margin: 1rem 0;
   background: var(--green);
-  
+
 }
 
 .transaction p{
   color: var(--gray-700);
+}
+
+.transaction .removeButton{
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+}
+
+.transaction .removeButton:hover{
+  color: red;
+  cursor: pointer;
 }

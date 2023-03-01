@@ -13,7 +13,7 @@ const Transaction = ({transaction, onRemove}: Props) =>{
     <div className={styles.transaction}>
       <p>{transaction.type === 'received' ? 'Entrada' : 'Saída'}</p>
       <p>{transaction.amount}</p>
-      <button onClick={() => onRemove(transaction.id)}>
+      <button className={styles.removeButton} onClick={() => onRemove(transaction.id)}>
         <Trash />
       </button>
     </div>

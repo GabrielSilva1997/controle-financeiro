@@ -33,6 +33,16 @@
   align-items: center;
   justify-content: center;
   padding: 1rem;
+  margin-top: 14rem;
+  
+}
+
+.empty .icon{
+  font-size: 5rem;
+}
+
+.empty p, span{
+  font-size: 1.5rem;
 }
 
 .balance{

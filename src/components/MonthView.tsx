@@ -53,7 +53,7 @@ const MonthView = ({transactions, onRemove}: Props) =>{
         )}
 
         {transactions.length <= 0 &&(<div className={styles.empty}>
-          <TbReportMoney font-size={50} />
+          <TbReportMoney className={styles.icon} />
           <p>Você ainda não realizou transações</p>
           <span>Faça uma transação e controle seus gastos</span>
         </div>)}
@@ -61,7 +61,7 @@ const MonthView = ({transactions, onRemove}: Props) =>{
       </div>
 
       <div className={styles.balance}>
-        <Balance /> {/*totalReceived={balanceReceived} />*/}
+        <Balance transactions={transactions} /> {/*totalReceived={balanceReceived} />*/}
       </div>
     </div>
   );
