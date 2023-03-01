@@ -1,3 +1,4 @@
+import { RadioButton } from 'phosphor-react';
 import { ChangeEvent, FormEvent, useState } from 'react';
 import styles from './InputData.module.css';
 
@@ -36,7 +37,7 @@ const InputData = ({ onSetTransactions }: Props) => {
             onClick={() => {setType('received')} }
             required
           />
-          <label htmlFor='received'>Entrada</label>
+          <label className={styles.radioButton} htmlFor='received'>Entrada</label>
 
           <input 
             type='radio' 
@@ -44,11 +45,12 @@ const InputData = ({ onSetTransactions }: Props) => {
             name='typeTransaction' 
             id='spent' 
             required 
-            onClick={() => {setType('spent')}} />
-          <label htmlFor='spent'>Saída</label>
+            onClick={() => {setType('spent')}} 
+          />
+          <label className={styles.radioButton} htmlFor='spent'>Saída</label>
         </div>
 
-        <div>
+        <div className={styles.inputValue}>
           <label>Valor</label>
           <input 
             type='text' 

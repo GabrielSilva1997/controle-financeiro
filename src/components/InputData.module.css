@@ -7,5 +7,47 @@
   background: var(--gray-300);
   border: 1px solid var(--gray-400);
   border-radius: 0.5rem;
+  padding: 1rem;
+  
 }
+
+.container span{
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.container .radioButton{
+  margin: 0 0.5rem;
+}
+
+.container .inputValue{
+  margin: 0.5rem 0;
+}
+
+.container .inputValue label{
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.container .inputValue input{
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;  
+  cursor: pointer;
+}
+
+.container button{
+  background: var(--green-light);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.container button:hover{
+  background: var(--green);
+  cursor: pointer;
+  font-weight: bold;
+}
+
 
