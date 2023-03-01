@@ -14,7 +14,7 @@ const Transaction = ({transaction, onRemove}: Props) =>{
       <p>{transaction.type === 'received' ? 'Entrada' : 'Saída'}</p>
       <p>{transaction.amount}</p>
       <button className={styles.removeButton} onClick={() => onRemove(transaction.id)}>
-        <Trash />
+        <Trash size={24}/>
       </button>
     </div>
   );
