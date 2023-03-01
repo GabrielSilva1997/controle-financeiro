@@ -10,20 +10,9 @@ interface Props{
   onRemove: (transactionID: string) => void;
 }
 
-/*export interface balance {
-    opReceived: number;
-    amountReceived: number;
-}*/
-
 const MonthView = ({transactions, onRemove}: Props) =>{
   const received = transactions.filter(transaction => transaction.type === 'received').length;
   const spent = transactions.filter(transaction => transaction.type === 'spent').length;
-
-  /*const balanceReceived = transactions.reduce((acc, elem) => {
-    if(elem.type === 'received'){
-      return acc + elem.amount;
-    }
-  }, 0);*/
 
   return(
     <div className={styles.monthView}>

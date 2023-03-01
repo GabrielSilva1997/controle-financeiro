@@ -11,7 +11,6 @@ const Balance = ({transactions}: Props) =>{
 
   return(
     <div className={styles.balance}>
-      console.log()
       <div className={styles.recebido}> {/* Mudar nome para inglês */}
         <p>Total recebido</p> 
         <span>valor</span>

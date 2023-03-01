@@ -8,7 +8,7 @@ interface Props {
 
 const InputData = ({ onSetTransactions }: Props) => {
   const [amount, setAmount] = useState(0);
-  const [type, setType] = useState('received');
+  const [type, setType] = useState('');
 
   function handleAmount(event: FormEvent) {
     event.preventDefault();
@@ -16,7 +16,7 @@ const InputData = ({ onSetTransactions }: Props) => {
     onSetTransactions(amount, type);
 
     setAmount(0);
-    setType('');
+    setType(type);
   }
 
   function onChangeValue(event: ChangeEvent<HTMLInputElement>) {
