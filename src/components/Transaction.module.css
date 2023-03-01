@@ -4,4 +4,14 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  border: 1px solid var(--blue-300);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  background: var(--green);
+  
+}
+
+.transaction p{
+  color: var(--gray-700);
 }

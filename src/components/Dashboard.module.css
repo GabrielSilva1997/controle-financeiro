@@ -1,17 +1,27 @@
 .main{
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
+  min-height: 100vh;
+  background: var(--gray-200);
+  padding: 0 2rem;
 }
 
 .main .month{
   display: flex;
   justify-content: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.main .month input{
+  border-radius: 0.5rem;
 }
 
 .container{
   display: flex;
   flex-direction: row;
+  gap: 2rem;
+  border-top: 1px solid var(--blue-300);
 }
 
 .container aside{

@@ -1,5 +1,16 @@
 .monthView{
+  position: relative;
   width: 100%;
+  min-height: 80vh;
+  padding: 2rem;
+  background: var(--gray-300);
+  border: 1px solid var(--gray-400);
+  border-radius: 0.5rem;
+}
+
+.monthView h2{
+  margin-bottom: 1rem;
+  font-size: 2rem;
 }
 
 .status{
@@ -7,4 +18,26 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--gray-400);
+}
+
+.status span{
+  background: var(--gray-400);
+  padding: 0.250rem;
+  border-radius: 999px;
+}
+
+.empty{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.balance{
+  position: fixed;
+  background: red;
+  bottom: 0;
 }

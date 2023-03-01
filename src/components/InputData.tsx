@@ -39,23 +39,24 @@ const InputData = ({ onSetTransactions }: Props) => {
           <label htmlFor='received'>Entrada</label>
 
           <input 
-          type='radio' 
-          value={type} 
-          name='typeTransaction' 
-          id='spent' 
-          required 
-          onClick={() => {setType('spent')}} />
+            type='radio' 
+            value={type} 
+            name='typeTransaction' 
+            id='spent' 
+            required 
+            onClick={() => {setType('spent')}} />
           <label htmlFor='spent'>Saída</label>
         </div>
 
         <div>
           <label>Valor</label>
           <input 
-          type='text' 
-          placeholder='R$' 
-          value={amount} 
-          onChange={onChangeValue} 
-          required />
+            type='text' 
+            placeholder='R$' 
+            value={amount} 
+            onChange={onChangeValue} 
+            required 
+          />
         </div>
 
         <button type='submit'>
