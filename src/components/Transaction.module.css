@@ -1,6 +1,5 @@
 .transaction{
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   width: 100%;
@@ -14,6 +13,8 @@
 
 .transaction p{
   color: var(--gray-700);
+  width: 4rem;
+  
 }
 
 .transaction .removeButton{
