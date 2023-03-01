@@ -1,7 +1,7 @@
 .main{
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: calc(100vh - 5rem);
   background: var(--gray-200);
   padding: 0 2rem;
 }

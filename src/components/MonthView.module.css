@@ -1,7 +1,7 @@
 .monthView{
   position: relative;
   width: 100%;
-  min-height: 80vh;
+  height: 50rem;
   padding: 2rem;
   background: var(--gray-300);
   border: 1px solid var(--gray-400);
@@ -15,7 +15,6 @@
 
 .status{
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   padding-bottom: 0.5rem;
@@ -37,7 +36,8 @@
 }
 
 .balance{
-  position: fixed;
-  background: red;
+  position: absolute;
   bottom: 0;
+  margin-bottom: 2rem;
+  width: calc(100% - 4rem);
 }
