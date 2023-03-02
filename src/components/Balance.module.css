@@ -9,10 +9,10 @@
   padding-top: 1rem;
 }
 
-.balance .recebido{
-  width: 50%;
+.balance .received p, .spent p, .diference p{
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-.balance .gasto{
-  width: 50%;
-}
+
+

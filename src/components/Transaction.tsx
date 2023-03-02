@@ -10,13 +10,24 @@ interface Props{
 
 const Transaction = ({transaction, onRemove}: Props) =>{
   return(
-    <div className={styles.transaction}>
-      <p>{transaction.type === 'received' ? 'Entrada' : 'Saída'}</p>
-      <p>{transaction.amount}</p>
-      <button className={styles.removeButton} onClick={() => onRemove(transaction.id)}>
-        <Trash size={24}/>
-      </button>
-    </div>
+    <>
+      {transaction.type === 'received' ? 
+        <div className={styles.in}>
+          <p>Entrada</p> 
+          <p>{transaction.amount}</p>
+          <button className={styles.removeButton} onClick={() => onRemove(transaction.id)}>
+            <Trash size={24}/>
+          </button>
+        </div>: 
+        <div className={styles.out}>
+          <p>Saída</p> 
+          <p>{transaction.amount}</p>
+          <button className={styles.removeButton} onClick={() => onRemove(transaction.id)}>
+            <Trash size={24}/>
+          </button>
+        </div>
+     }
+    </>
   );
 }
 

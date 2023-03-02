@@ -3,14 +3,17 @@ import Balance from "./Balance";
 
 import styles from './MonthView.module.css';
 import { ITransaction } from "./Dashboard";
-import { TbReportMoney } from 'react-icons/tb'
+import { Receipt } from 'phosphor-react';
+import { useState } from "react";
 
 interface Props {
   transactions: ITransaction[];
   onRemove: (transactionID: string) => void;
+  month: string;
 }
 
-const MonthView = ({transactions, onRemove}: Props) =>{
+const MonthView = ({transactions, onRemove, month}: Props) =>{
+  
   const received = transactions.filter(transaction => transaction.type === 'received').length;
   const spent = transactions.filter(transaction => transaction.type === 'spent').length;
 
@@ -18,7 +21,7 @@ const MonthView = ({transactions, onRemove}: Props) =>{
 
     <div className={styles.monthView}>
 
-      <h2>FEVEREIRO</h2> {/* Mês será dinâmico futuramente*/}
+      <h2>{month === '' ? 'MÊS': month.toUpperCase()}</h2> 
 
       <div className={styles.status}>
         <p>
@@ -43,7 +46,7 @@ const MonthView = ({transactions, onRemove}: Props) =>{
         )}
 
         {transactions.length <= 0 && (<div className={styles.empty}>
-          <TbReportMoney className={styles.icon} />
+          <Receipt className={styles.icon} />
           <p>Você ainda não realizou transações</p>
           <span>Faça uma transação e controle seus gastos</span>
         </div>)}
@@ -51,7 +54,7 @@ const MonthView = ({transactions, onRemove}: Props) =>{
       </div>
 
       <div className={styles.balance}>
-        <Balance transactions={transactions} /> {/*totalReceived={balanceReceived} />*/}
+        <Balance transactions={transactions} /> 
       </div>
     </div>
   );

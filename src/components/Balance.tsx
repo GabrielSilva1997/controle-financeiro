@@ -6,9 +6,6 @@ interface Props{
 }
 
 const Balance = ({transactions}: Props) =>{
-  const received = transactions.filter(transaction => transaction.type === 'received');
-  const spent = transactions.filter(transaction => transaction.type === 'spent');
-
   const balanceReceived = transactions.reduce((acc, transaction) => {
     if (transaction.type === 'received') {
       acc.received += transaction.amount;
@@ -27,15 +24,21 @@ const Balance = ({transactions}: Props) =>{
 
   return(
     <div className={styles.balance}>
-      <div className={styles.recebido}> {/* Mudar nome para inglês */}
-        <p>Total recebido</p> 
-        <span>{balanceReceived.received}</span>
+      <div className={styles.received}> 
+        <p>Recebido: </p> 
+        <span>{`R$ ${balanceReceived.received}`}</span>
       </div>
 
-      <div className={styles.gasto}> {/* Mudar nome para inglês */}
-        <p>Total gasto</p>
-        <span>{balanceReceived.spent}</span>
+      <div className={styles.spent}> 
+        <p>Gasto:</p>
+        <span>{`R$ ${balanceReceived.spent}`}</span>
       </div>
+
+      <div className={styles.diference}> 
+        <p>Saldo:</p>
+        <span>{`R$ ${balanceReceived.received - balanceReceived.spent}`}</span>
+      </div>
+
     </div>
   );
 }

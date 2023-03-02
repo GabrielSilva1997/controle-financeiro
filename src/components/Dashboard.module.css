@@ -13,7 +13,10 @@
   font-size: 1.5rem;
 }
 
-.main .month input{
+.main .month select{
+  width: 7rem;
+  padding: 0.5rem;
+  border: none;
   border-radius: 0.5rem;
 }
 

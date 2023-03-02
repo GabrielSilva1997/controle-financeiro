@@ -3,7 +3,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background: var(--gray-100);
+  background: var(--gray-300);
   height: 5rem;
   color: white;
   padding: 1rem;

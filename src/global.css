@@ -24,7 +24,7 @@
   box-sizing: border-box;
 }
 
-body, input, p, button{
+body, input, button{
   font-size: 1rem;
   font-family: 'Roboto', sans-serif;
   color: var(--gray-600);

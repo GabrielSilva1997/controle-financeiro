@@ -1,30 +1,63 @@
-.transaction{
+.in{
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  border: 1px solid var(--blue-300);
+  border: 1px solid var(--gray-600);
   border-radius: 0.5rem;
   padding: 1rem;
   margin: 1rem 0;
-  background: var(--green);
-
+  background: var(--green-light);
+  color: var(--gray-100);
 }
 
-.transaction p{
-  color: var(--gray-700);
+.out{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border: 1px solid var(--gray-600);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  background: var(--red);
+}
+
+.in p{
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: var(--white);
   width: 4rem;
-  
 }
 
-.transaction .removeButton{
+.out p{
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: var(--white);
+  width: 4rem;
+}
+
+
+.in .removeButton{
   border: none;
   background: none;
   width: 24px;
   height: 24px;
 }
 
-.transaction .removeButton:hover{
-  color: red;
+.in .removeButton:hover{
+  color: var(--white);
+  cursor: pointer;
+}
+
+.out .removeButton{
+  border: none;
+  background: none;
+  width: 24px;
+  height: 24px;
+}
+
+.out .removeButton:hover{
+  color: var(--white);
   cursor: pointer;
 }

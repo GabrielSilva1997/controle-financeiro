@@ -25,6 +25,7 @@
   background: var(--gray-400);
   padding: 0.250rem;
   border-radius: 999px;
+  font-size: 1rem;
 }
 
 .empty{
